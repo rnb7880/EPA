@@ -15,10 +15,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HelpScreen" />
-        <activity android:name=".SelectionScreen" />
-        <activity android:name=".AboutScreen" />
-        <activity android:name=".SpotPage"></activity>
     </application>
 
 </manifest>
