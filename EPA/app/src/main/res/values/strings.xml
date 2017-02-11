@@ -2,4 +2,7 @@
     <string name="app_name">EPA</string>
     <string name="edit_message">Text Here</string>
     <string name="button_send">Send</string>
+    <string name="mbText">MICHAEL B</string>
+    <string name="mjText">MICHAEL J</string>
+    <string name="rbText">RACHEL B</string>
 </resources>

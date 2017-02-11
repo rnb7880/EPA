@@ -20,33 +20,54 @@
                 android:text="About the Developers"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:id="@+id/textView3"
-                android:height="60dp"
-                android:textSize="34sp"
-                android:textAlignment="center" />
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/mj"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="65dp" />
-
-            <TextView
-                android:text="TEXT 1"
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                android:id="@+id/textViewMB"
+                android:id="@+id/textViewAbout"
                 android:height="60dp"
                 android:textSize="34sp"
                 android:textAlignment="center"
-                android:layout_alignTop="@+id/imageView"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true"
-                android:layout_weight="0.36" />
-
+                />
+        <!-- MICHAEL JONES-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/mj"
+                android:layout_weight="0.67" />
+            <TextView
+                android:text="@string/mjText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMJ"
+                android:textSize="34sp"
+                android:textAlignment="center"
+                android:layout_alignTop="@+id/mjInfo"
+                />
+<!-- MICHAEL BAUMGARTEN-->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:src="@drawable/icon"
+                android:layout_weight="0.67" />
+            <TextView
+                android:text="@string/mbText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMB"
+                android:textSize="34sp"
+                android:textAlignment="center"
+                android:layout_alignTop="@+id/mjInfo" />
+<!-- RACHEL BAUMGARTEN-->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/rb"
+            android:layout_weight="0.67" />
+        <TextView
+            android:text="@string/rbText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewRB"
+            android:textSize="34sp"
+            android:textAlignment="center"
+            android:layout_alignTop="@+id/mjInfo" />
 
     </TableLayout>
 
