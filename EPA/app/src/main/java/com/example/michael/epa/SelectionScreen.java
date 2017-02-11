@@ -16,13 +16,17 @@ public class SelectionScreen extends AppCompatActivity {
     private void setBuildingID(String id){
         buildingID = id;
     }
+    private boolean buildingSelected(){
+        return !buildingID.isEmpty();
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection_screen);
 
-        String[] buildings = new String[]{"A", "B", "C"};                                               //TODO add buildings algorithmically?
+        final String[] buildings = new String[]{"Select a building", "A", "B", "C"};                          //TODO add buildings algorithmically?
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(SelectionScreen.this,
@@ -31,20 +35,21 @@ public class SelectionScreen extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
-        final String building_id = "";
-
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 switch (position) {                                                                    // TODO must be changed with above todo tag
                     case 0:
-
+                        setBuildingID("");
                         break;
                     case 1:
                         setBuildingID("A");
                         break;
                     case 2:
                         setBuildingID("B");
+                        break;
+                    case 3:
+                        setBuildingID("C");
                         break;
 
                     default:
@@ -54,7 +59,6 @@ public class SelectionScreen extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                String building_id = "";
             }
         });
 
@@ -66,7 +70,7 @@ public class SelectionScreen extends AppCompatActivity {
         find_spot.setText("Find a Spot");
         find_spot.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if(!building_id.isEmpty()) {
+                if(buildingSelected()) {
                     Intent intent = new Intent(SelectionScreen.this, LoadingScreen.class);
                     startActivity(intent);
                 }
