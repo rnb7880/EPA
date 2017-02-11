@@ -20,8 +20,16 @@ public class LoadingScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("https://people.rit.edu/mb2732/EPA/lotdata.txt");
+                    URL url = new URL("https://people.rit.edu/msj1475/EPA/lotdata.txt");
                     Scanner s = new Scanner(url.openStream());
+
+                    /* FILE FORMAT
+                    # comment, ignore line
+                    lot_id space_id x_coord y_coord occupied
+
+                    occupied will be 1 if full, 0 if available
+                     */
+                    
                     // read through scanner
                     s.close();
                 }catch(IOException ex){
