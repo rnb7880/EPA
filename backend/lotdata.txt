@@ -1,0 +1,10 @@
+# lot data and parking 
+# format: lotid, spotid, xcord, ycord, isoccupied (1 is occupied)
+
+A, 0, 0, 0, 1
+A, 1, 10, 0, 1
+A, 2, 20, 0, 0
+A, 3, 0, 10, 1
+A, 4, 10, 10, 1
+A, 5, 20, 10, 0
+
