@@ -43,5 +43,15 @@ public class MainMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        final Button testload = (Button) findViewById(R.id.loading);
+        testload.setText("Loading");
+        testload.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, LoadingScreen.class);
+                startActivity(intent);
+            }
+        });
     }
 }

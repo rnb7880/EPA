@@ -14,12 +14,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".SelectionScreen" />
         <activity android:name=".SpotPage" />
         <activity android:name=".HelpPage" />
-        <activity android:name=".AboutPage"></activity>
+        <activity android:name=".AboutPage" />
+        <activity android:name=".LoadingScreen"></activity>
     </application>
 
 </manifest>
