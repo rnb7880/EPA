@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EPA</string>
+    <string name="edit_message">Text Here</string>
+    <string name="button_send">Send</string>
 </resources>
