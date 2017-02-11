@@ -10,8 +10,35 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.michael.epa.MainMenu">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button android:id="@+id/find_spot"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_marginTop="72dp"
+        android:text="Find a Spot"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button android:id="@+id/help"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/find_spot"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="58dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="34dp" />
+
+    <Button android:id="@+id/about"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_alignBaseline="@+id/help"
+        android:layout_alignBottom="@+id/help"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
