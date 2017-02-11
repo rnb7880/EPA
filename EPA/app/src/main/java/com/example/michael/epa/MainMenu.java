@@ -13,6 +13,11 @@ public class MainMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
+
+
+        /* ***************************************************
+                NAV BUTTONS
+        ******************************************************* */
         final Button find_spot = (Button) findViewById(R.id.find_spot);
         find_spot.setText("Find a Spot");
         find_spot.setOnClickListener(new View.OnClickListener() {
