@@ -20,7 +20,7 @@ public class LoadingScreen extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    URL url = new URL("https://people.rit.edu/msj1475/EPA/lotdata.txt");
+                    URL url = new URL("https://people.rit.edu/~msj1475/EPA/lotdata.txt");
                     Scanner s = new Scanner(url.openStream());
 
                     /* FILE FORMAT
