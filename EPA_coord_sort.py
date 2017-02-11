@@ -21,16 +21,26 @@ Functions
 def rand_coord(num):
     lst = []
     for i in range (num):
-        lst.append(r.randint * 10,r.randint*10)
+        a = r.randint(0,9)
+        b = r.randint(0,9)
+        tup = (a,b)
+        lst.append(tup)
     return lst
 
 def sort_coords(lst):
-        insertionSort(lst,0)
+        insertionSort(lst,len(lst))
         return lst
 
-
 def compare_ycoords(coord1,coord2):
-    if coord1(1) > coord1(1):
+    if coord1[1] > coord2[1]:
+        return True
+    if coord1[1] == coord2[1]:
+        return compare_xcoords(coord1,coord2)
+    else:
+        return False
+
+def compare_xcoords(coord1,coord2):
+    if coord1[0] > coord2[0]:
         return True
     else:
         return False
@@ -54,7 +64,7 @@ def insertionSort(list,index):
     :return:
     """
     for index in range(0,len(list)-1):
-        while index > -1 and compare_ycoords(list[index],list [index +1]):
+        while index > -1 and compare_ycoords(list[index],list[index +1]):
             if index == len(list):
                 break
             swap(list,index,index+1)
