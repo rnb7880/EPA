@@ -29,7 +29,7 @@ public class LoadingScreen extends AppCompatActivity {
 
                     occupied will be 1 if full, 0 if available
                      */
-                    
+
                     // read through scanner
                     s.close();
                 }catch(IOException ex){
