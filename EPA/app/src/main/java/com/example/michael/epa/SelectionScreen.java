@@ -19,6 +19,9 @@ public class SelectionScreen extends AppCompatActivity {
     private boolean buildingSelected(){
         return !buildingID.isEmpty();
     }
+    private String getBuildingID(){
+        return buildingID;
+    }
 
 
     @Override
@@ -72,6 +75,7 @@ public class SelectionScreen extends AppCompatActivity {
             public void onClick(View v) {                                                   // moves on to loading screen when a building is selected
                 if(buildingSelected()) {                                                    // TODO send selected building to loading screen
                     Intent intent = new Intent(SelectionScreen.this, LoadingScreen.class);
+                    intent.putExtra("building_id", getBuildingID());
                     startActivity(intent);
                 }
             }
