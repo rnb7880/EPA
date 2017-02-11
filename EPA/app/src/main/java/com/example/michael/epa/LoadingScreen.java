@@ -39,5 +39,6 @@ public class LoadingScreen extends AppCompatActivity {
         });
         thread.start();
 
+
     }
 }
