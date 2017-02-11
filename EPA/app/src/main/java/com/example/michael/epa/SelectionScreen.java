@@ -69,14 +69,22 @@ public class SelectionScreen extends AppCompatActivity {
         final Button find_spot = (Button) findViewById(R.id.find_spot);
         find_spot.setText("Find a Spot");
         find_spot.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if(buildingSelected()) {
+            public void onClick(View v) {                                                   // moves on to loading screen when a building is selected
+                if(buildingSelected()) {                                                    // TODO send selected building to loading screen
                     Intent intent = new Intent(SelectionScreen.this, LoadingScreen.class);
                     startActivity(intent);
                 }
             }
         });
 
+        final Button main_menu = (Button) findViewById(R.id.main_menu);
+        main_menu.setText("Main Menu");
+        main_menu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(SelectionScreen.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
