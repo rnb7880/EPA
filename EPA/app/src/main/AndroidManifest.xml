@@ -18,8 +18,8 @@
         <activity android:name=".SelectionScreen" />
         <activity android:name=".SpotPage" />
         <activity android:name=".HelpPage" />
-        <activity android:name=".AboutPage" />
-        <activity android:name=".LoadingScreen"></activity>
+        <activity android:name=".LoadingScreen" />
+        <activity android:name=".AboutPage"></activity>
     </application>
 
 </manifest>
