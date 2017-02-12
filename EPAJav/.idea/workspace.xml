@@ -441,7 +441,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="1884" y="0" width="1292" height="732" extended-state="1" />
+=======
+    <frame x="1884" y="0" width="1970" height="2074" extended-state="0" />
+>>>>>>> 2f196f9bc56d18f37dc3b59b2e63acb2b1b56306
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />

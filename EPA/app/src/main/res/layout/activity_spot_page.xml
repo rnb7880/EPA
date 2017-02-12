@@ -53,26 +53,26 @@
         android:gravity="center_horizontal" />
 
     <TextView
+        android:layout_height="wrap_content"
+        android:id="@+id/lot_id"
+        android:textSize="36sp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/lot"
+        android:layout_toRightOf="@+id/lot"
+        android:layout_toEndOf="@+id/lot"
+        android:gravity="center" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/spot_id"
         android:textSize="36sp"
         android:layout_alignBaseline="@+id/lot_id"
         android:layout_alignBottom="@+id/lot_id"
-        android:layout_alignLeft="@+id/spot"
-        android:layout_alignStart="@+id/spot" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/lot_id"
-        android:layout_marginTop="17dp"
-        android:textSize="36sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
-        android:layout_below="@+id/lot"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toLeftOf="@+id/spot"
+        android:layout_toStartOf="@+id/spot"
+        android:gravity="center" />
 
 
 </RelativeLayout>
