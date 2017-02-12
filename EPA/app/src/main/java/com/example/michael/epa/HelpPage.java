@@ -29,6 +29,7 @@ public class HelpPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HelpPage.this, AboutPage.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -38,6 +39,7 @@ public class HelpPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HelpPage.this, MainMenu.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -46,6 +48,7 @@ public class HelpPage extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(HelpPage.this, MainMenu.class);
                 startActivity(intent);
+                finish();
             }
         });
 

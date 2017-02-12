@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 public class SelectionScreen extends AppCompatActivity {
@@ -87,6 +88,16 @@ public class SelectionScreen extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(SelectionScreen.this, MainMenu.class);
                 startActivity(intent);
+                finish();
+            }
+        });
+
+        final ImageButton logo = (ImageButton) findViewById(R.id.logo);
+        logo.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(SelectionScreen.this, MainMenu.class);
+                startActivity(intent);
+                finish();
             }
         });
 
