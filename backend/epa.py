@@ -5,7 +5,6 @@ from SortCoord import *
 import time
 import UploadData
 import os
-import random
 
 def readmask(mask):
     """
@@ -66,7 +65,7 @@ def setoccupancy(im_lot,spotlist,im_empty_lot):
 
         count+=1
 
-        f.write("F "+"20 "+str(count)+" "+str(spot.x)+" "+str(spot.y)+" "+str(taken)+"\n")
+        f.write("F 20 "+str(count)+" "+str(spot.x)+" "+str(spot.y)+" "+str(taken)+"\n")
 
     f.close()
 
@@ -74,9 +73,12 @@ def setoccupancy(im_lot,spotlist,im_empty_lot):
     return spotlist
 
 def isoccupied(spot,imlot,im_empty_lot,count):
-    
     x0, y0, x1, y1 = spot.getcoordinates()
-    crop_spot_empty = im_empty_lot[y0:y1, x0:x1]
+    # crop_spot_empty = im_empty_lot[y0:y1, x0:x1]
+
+
+    im_empty_lot = cv2.imread('pk_large/pk_large_empty.jpg', cv2.IMREAD_GRAYSCALE)
+    crop_spot_empty = im_empty_lot[0:y1-y0,0:x1-x0]
     # cv2.imshow("",crop_spot_empty)
     # cv2.waitKey(0)
 
@@ -95,6 +97,8 @@ def isoccupied(spot,imlot,im_empty_lot,count):
     r,imlot = cv2.threshold(imlot,90,255,3)
     crop_spot_occupied = imlot[y0:y1, x0:x1]
 
+
+
     """
     if count == 22:
         cv2.imshow("",crop_spot_occupied)
@@ -108,7 +112,7 @@ def isoccupied(spot,imlot,im_empty_lot,count):
     percentdiff = np.mean(diff)
 
     # print(percentdiff)
-    return (percentdiff > 45)
+    return (percentdiff > 55)
 
 
 def updateoccupancy(im_lot,spotlist,im_empty_lot):
@@ -143,49 +147,25 @@ def printlot(spotlist):
         else:
             boollist.append(" ")
 
-    print("")
     print("|"+boollist[39]+"|"+boollist[38]+"|"+boollist[37]+"|"+boollist[36]+"|"+boollist[35]+"|"+boollist[34]+"|"+
           boollist[33]+"|"+boollist[32]+"|"+boollist[31]+"|"+boollist[30]+"|")
-    
     print("---------------------")
     print("|"+boollist[29]+"|"+boollist[28]+"|"+boollist[27]+"|"+boollist[26]+"|"+boollist[25]+"|"+boollist[24]+"|"+
           boollist[23]+"|"+boollist[22]+"|"+boollist[21]+"|"+boollist[20]+"|")
-
-    print("")
-    print("")
+    print("---------------------")
     print("|"+boollist[19]+"|"+boollist[18]+"|"+boollist[17]+"|"+boollist[16]+"|"+boollist[15]+"|"+boollist[14]+"|"+
           boollist[13]+"|"+boollist[12]+"|"+boollist[11]+"|"+boollist[10]+"|")
-
     print("---------------------")
-    print("|"+boollist[9]+"|"+boollist[8]+"|"+boollist[7]+"|"+boollist[6]+"|"+boollist[5]+"|"+boollist[5]+"|"+
-          boollist[4]+"|"+boollist[3]+"|"+boollist[2]+"|"+boollist[1]+"|")
+    print("|"+boollist[9]+"|"+boollist[8]+"|"+boollist[7]+"|"+boollist[6]+"|"+boollist[5]+"|"+boollist[4]+"|"+
+          boollist[3]+"|"+boollist[2]+"|"+boollist[1]+"|"+boollist[0]+"|")
+    print("---------------------")
 
-def printquotes():
-    quotes = []
-    quotes.append("eating snacks...")
-    quotes.append("taking a nap...")
-    quotes.append("going outside...")
-    quotes.append("flushing pipe network...")
-    quotes.append("integrating curves...")
-    quotes.append("searching for llamas...")
-    quotes.append("synthesizing gravity...")
-    quotes.append("farming clementines...")
-    quotes.append("petting rhinos...")
-    quotes.append("loading...")
-    quotes.append("press 'A' to jump")
-    quotes.append("baking fishsticks...")
-    quotes.append("melting tuna melts...")
-    quotes.append("threading the needle...")
-    quotes.append("tuning a fish...")
-    quotes.append("climbing a tree...")
-    quotes.append("bathing the cat...")
+    ct = 0
+    for b in boollist:
+        if b != "*":
+            ct+=1
+    print(str(ct)+" spot(s) free")
     print("")
-
-    for i in range(3):
-        j = random.randint(0,16)
-        print(quotes[j])
-        time.sleep(2)
-
 
 def main():
     im_empty_lot = cv2.imread("pk_large/pk_large_empty.jpg",cv2.IMREAD_GRAYSCALE)
@@ -215,9 +195,7 @@ def main():
         im_lot = updateoccupancy(im_lot,spotlist,im_empty_lot)
 
         printlot(spotlist)
-        printquotes()
-        
-        
+        time.sleep(2)
 
 main()
 
