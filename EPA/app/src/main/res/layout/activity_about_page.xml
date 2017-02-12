@@ -55,7 +55,7 @@
                 android:id="@+id/mbInfo"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:src="@drawable/icon"
+                android:src="@drawable/mb"
                 android:layout_weight="0.67"
                 />
             <TextView
@@ -71,7 +71,7 @@
             android:id="@+id/rbInfo"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/mj"
+            android:src="@drawable/rb"
             android:layout_weight="0.67" />
 
         <TextView

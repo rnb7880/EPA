@@ -16,8 +16,6 @@ public class AboutPage extends AppCompatActivity {
         final ImageButton logo = (ImageButton) findViewById(R.id.logo);
         logo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(AboutPage.this, MainMenu.class);
-                startActivity(intent);
                 finish();
             }
         });

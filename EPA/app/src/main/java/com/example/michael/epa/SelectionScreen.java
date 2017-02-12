@@ -86,8 +86,6 @@ public class SelectionScreen extends AppCompatActivity {
         main_menu.setText("Main Menu");
         main_menu.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(SelectionScreen.this, MainMenu.class);
-                startActivity(intent);
                 finish();
             }
         });
@@ -95,8 +93,6 @@ public class SelectionScreen extends AppCompatActivity {
         final ImageButton logo = (ImageButton) findViewById(R.id.logo);
         logo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(SelectionScreen.this, MainMenu.class);
-                startActivity(intent);
                 finish();
             }
         });
