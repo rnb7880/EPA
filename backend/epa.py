@@ -74,6 +74,7 @@ def setoccupancy(im_lot,spotlist,im_empty_lot):
     return spotlist
 
 def isoccupied(spot,imlot,im_empty_lot,count):
+    
     x0, y0, x1, y1 = spot.getcoordinates()
     crop_spot_empty = im_empty_lot[y0:y1, x0:x1]
     # cv2.imshow("",crop_spot_empty)
