@@ -29,16 +29,16 @@ public class Lot {
 
     public void getDims(){
         int[] dims = new int[2];
-        int width = -1;
+        int width = 1;
         int height;
-        for(int i = 0; i < spaces.size()-1;i++){
-            if(spaces.get(i).get_y() - spaces.get(i+1).get_y() < thresh){
+        for(int i = 1; i < spaces.size()-1;i++){
+            if(Math.abs(spaces.get(i-1).get_y() - spaces.get(i).get_y()) < thresh){
                 width ++;
             }
             else{break;}
         }
-        height = spaces.size()%width;
-        width = width -1;
+        height = spaces.size()/width;
+        //width = width -1;
         lotWidth = width;
         lotHeight = height;
 
