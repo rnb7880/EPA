@@ -66,7 +66,7 @@ def setoccupancy(im_lot,spotlist,im_empty_lot):
 
         count+=1
 
-        f.write("F "+str(count)+" "+str(spot.x)+" "+str(spot.y)+" "+str(taken)+"\n")
+        f.write("F "+"20 "+str(count)+" "+str(spot.x)+" "+str(spot.y)+" "+str(taken)+"\n")
 
     f.close()
 
@@ -108,7 +108,7 @@ def isoccupied(spot,imlot,im_empty_lot,count):
     percentdiff = np.mean(diff)
 
     # print(percentdiff)
-    return (percentdiff > 50)
+    return (percentdiff > 45)
 
 
 def updateoccupancy(im_lot,spotlist,im_empty_lot):
@@ -176,10 +176,13 @@ def printquotes():
     quotes.append("baking fishsticks...")
     quotes.append("melting tuna melts...")
     quotes.append("threading the needle...")
+    quotes.append("tuning a fish...")
+    quotes.append("climbing a tree...")
+    quotes.append("bathing the cat...")
     print("")
 
     for i in range(3):
-        j = random.randint(0,13)
+        j = random.randint(0,16)
         print(quotes[j])
         time.sleep(2)
 

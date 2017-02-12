@@ -34,14 +34,17 @@ def Upload():
     print("initiating SFTP")
 
     # remote directory upload path
-    remotepath = "www/epa/lotdata.txt"
+    remotepath0 = "www/epa/lotdata.txt"
+    remotepath1 = "www/epa/building_info.txt"
 
     # local directory file path
-    localpath = "lotdata.txt"
+    localpath0 = "lotdata.txt"
+    localpath1 = "building_info.txt"
 
     # upload file from local dir to remote dir
-    print("attempting transfer "+localpath+ " to remote directory "+remotepath)
-    sftp.put(localpath,remotepath)
+    print("attempting transfer "+localpath0+ " to remote directory "+remotepath0)
+    sftp.put(localpath0,remotepath0)
+    sftp.put(localpath1,remotepath1)
     print("transfer successful!")
 
     # close out connection
