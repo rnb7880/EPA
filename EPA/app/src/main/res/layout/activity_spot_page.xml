@@ -17,6 +17,30 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="62dp"
-        android:id="@+id/textView4"
+        android:id="@+id/spot_title"
         android:textSize="30sp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:id="@+id/lot"
+        android:layout_below="@+id/spot_title"
+        android:layout_alignLeft="@+id/spot_title"
+        android:layout_alignStart="@+id/spot_title" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_marginEnd="12dp"
+        android:id="@+id/spot"
+        android:layout_alignBaseline="@+id/lot"
+        android:layout_alignBottom="@+id/lot"
+        android:layout_alignRight="@+id/spot_title"
+        android:layout_alignEnd="@+id/spot_title" />
+
+
 </RelativeLayout>

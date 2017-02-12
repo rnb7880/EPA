@@ -14,7 +14,7 @@ public class LoadingScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading_screen);
-
+        /*
         String building_id = getIntent().getStringExtra("building_id");                 // building id sent from Selection Screen
 
         Thread thread = new Thread(new Runnable() {
@@ -29,7 +29,7 @@ public class LoadingScreen extends AppCompatActivity {
                     lot_id space_id x_coord y_coord occupied
 
                     occupied will be 1 if full, 0 if available
-                     */
+                     
 
                     // read through scanner
 
@@ -43,6 +43,7 @@ public class LoadingScreen extends AppCompatActivity {
             }
         });
         thread.start();
+        */
 
 
     }

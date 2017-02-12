@@ -53,6 +53,17 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
+
+
+        final Button spot = (Button) findViewById(R.id.spot);
+        spot.setText("SPOT");
+        spot.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, SpotPage.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     @Override

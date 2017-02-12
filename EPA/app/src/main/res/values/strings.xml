@@ -10,6 +10,7 @@
     <string name="main_menu">Main Menu</string>
     <string name="about">About</string>
     <string name="selection_title">Which building are you parking at?</string>
-    <string name="spot_title">Your parking spot is...</string>
+    <string name="spot_title">Your parking spot is&#8230;</string>
+    <string name="image">image</string>
 
 </resources>
