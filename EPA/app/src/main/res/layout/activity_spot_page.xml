@@ -63,16 +63,15 @@
         android:layout_alignStart="@+id/spot" />
 
     <TextView
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/lot_id"
         android:layout_marginTop="17dp"
         android:textSize="36sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp"
         android:layout_below="@+id/lot"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_toLeftOf="@+id/lot"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_width="wrap_content" />
 
 
 </RelativeLayout>
