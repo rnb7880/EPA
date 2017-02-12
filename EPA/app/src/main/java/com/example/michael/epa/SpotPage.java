@@ -12,14 +12,27 @@ public class SpotPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spot_page);
 
-        String lot_id = getIntent().getStringExtra("lot_id");
-        String spot_id = getIntent().getStringExtra("spot_id");
+        String lotid = getIntent().getStringExtra("lot_id");
+        String spotid = getIntent().getStringExtra("spot_id");
 
-        TextView lot = (TextView)findViewById(R.id.lot);
-        lot.setText("LOT\n" + lot_id);
 
-        TextView spot = (TextView)findViewById(R.id.spot);
-        spot.setText("SPOT\n" + spot_id);
+
+        if(spotid.equals(new String("NA"))){
+            TextView sorry = (TextView)findViewById(R.id.sorry);
+            sorry.setText("Sorry!\nThe lot is completely full :(");
+        }else{
+            TextView lot = (TextView)findViewById(R.id.lot);
+            lot.setText("LOT");
+            TextView spot = (TextView)findViewById(R.id.spot);
+            spot.setText("SPOT");
+            TextView lot_id = (TextView) findViewById(R.id.lot_id);
+            lot_id.setText(lotid);
+            TextView spot_id = (TextView) findViewById(R.id.spot_id);
+            lot_id.setText(spotid);
+        }
+
+
+
     }
 
 

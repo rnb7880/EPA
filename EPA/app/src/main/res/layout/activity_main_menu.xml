@@ -19,25 +19,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <Button android:id="@+id/spot"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:layout_marginBottom="28dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <Button android:id="@+id/find_spot"
-        android:layout_width="fill_parent"
-        android:layout_marginTop="22dp"
-        android:text="Find a Spot"
-        android:textSize="44sp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/logo"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -68,5 +49,15 @@
             android:layout_height="80dp"
             android:textSize="24sp" />
     </LinearLayout>
+
+    <Button android:id="@+id/find_spot"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="63dp"
+        android:text="Find a Spot"
+        android:textSize="44sp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/logo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
