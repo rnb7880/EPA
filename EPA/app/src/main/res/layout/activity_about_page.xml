@@ -61,9 +61,14 @@
             android:id="@+id/rbInfo"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+<<<<<<< HEAD
             android:src="@drawable/rb"
             android:layout_weight="0.67"
             />
+=======
+            android:src="@drawable/mj"
+            android:layout_weight="0.67" />
+>>>>>>> origin/master
         <TextView
             android:text="@string/rbText"
             android:layout_width="match_parent"
