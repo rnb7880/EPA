@@ -31,6 +31,10 @@ public class LoadingScreen extends AppCompatActivity {
                      */
 
                     // read through scanner
+
+                    System.out.println(s);
+
+
                     s.close();
                 }catch(IOException ex){
                     //handle errors in reading from server
