@@ -17,6 +17,7 @@ public class SpotPage extends AppCompatActivity {
 
 
 
+
         if(spotid.equals(new String("NA"))){
             TextView sorry = (TextView)findViewById(R.id.sorry);
             sorry.setText("Sorry!\nThe lot is completely full :(");
@@ -28,7 +29,7 @@ public class SpotPage extends AppCompatActivity {
             TextView lot_id = (TextView) findViewById(R.id.lot_id);
             lot_id.setText(lotid);
             TextView spot_id = (TextView) findViewById(R.id.spot_id);
-            lot_id.setText(spotid);
+            spot_id.setText(spotid);
         }
 
 
