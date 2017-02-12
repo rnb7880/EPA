@@ -37,7 +37,7 @@
             <ImageView
                 android:id="@+id/mjInfo"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:src="@drawable/mj"
                 android:layout_weight="0.67"
                 android:contentDescription="@string/image" />
@@ -49,6 +49,14 @@
                 android:textSize="34sp"
                 android:textAlignment="center"
                                 />
+            <TextView
+                android:text="@string/mjTextBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMJBody"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                />
 <!-- MICHAEL BAUMGARTEN-->
             <ImageView
                 android:id="@+id/mbInfo"
@@ -63,6 +71,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewMB"
                 android:textSize="34sp"
+                android:textAlignment="center"
+                />
+            <TextView
+                android:text="@string/mbTextBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewMBBody"
+                android:textSize="20sp"
                 android:textAlignment="center"
                 />
 <!-- RACHEL BAUMGARTEN-->
@@ -82,6 +98,14 @@
             android:textSize="34sp"
             android:textAlignment="center"
              />
+        <TextView
+            android:text="@string/rbTextBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewRBBody"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
