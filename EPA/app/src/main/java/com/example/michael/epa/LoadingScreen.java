@@ -24,12 +24,12 @@ public class LoadingScreen extends AppCompatActivity {
                     URL url = new URL("https://people.rit.edu/~msj1475/EPA/lotdata.txt");
                     Scanner s = new Scanner(url.openStream());
 
-                    /* FILE FORMAT
+                    /* FILE FORMAT**********************************
                     # comment, ignore line
                     lot_id space_id x_coord y_coord occupied
 
                     occupied will be 1 if full, 0 if available
-                     
+                    ************************************************
 
                     // read through scanner
 
