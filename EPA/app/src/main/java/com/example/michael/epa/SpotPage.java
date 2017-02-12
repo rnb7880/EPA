@@ -12,8 +12,8 @@ public class SpotPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spot_page);
 
-        String lot_id = "";                                     //TODO  get from loading page
-        String spot_id = "";
+        String lot_id = getIntent().getStringExtra("lot_id");
+        String spot_id = getIntent().getStringExtra("spot_id");
 
         TextView lot = (TextView)findViewById(R.id.lot);
         lot.setText("LOT\n" + lot_id);
