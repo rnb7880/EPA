@@ -26,11 +26,11 @@ class Pkspot:
         bbx= 20
         bby = 30
 
-        topx = self.x-25
-        topy = self.y-40
+        topx = self.x-35
+        topy = self.y-30
 
         bottomx = self.x+25
-        bottomy = self.y+30
+        bottomy = self.y+40
 
 
         return topx,topy,bottomx,bottomy
