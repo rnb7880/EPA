@@ -35,7 +35,7 @@ public class LoadingScreen extends AppCompatActivity {
 
                     Campus RIT = new Campus("RIT");
 
-                    URL oracle = new URL("https://people.rit.edu/~mb2732/EPA/lotdata.txt");
+                    URL oracle = new URL("https://people.rit.edu/~mb2732/epa/lotdata.txt");
                     BufferedReader in = new BufferedReader(new InputStreamReader(oracle.openStream()));
 
 
@@ -70,7 +70,7 @@ public class LoadingScreen extends AppCompatActivity {
                     }
                     in.close();
 
-                    URL bldg = new URL("https://people.rit.edu/~mb2732/EPA/building_info.txt");
+                    URL bldg = new URL("https://people.rit.edu/~mb2732/epa/building_info.txt");
                     BufferedReader bld = new BufferedReader(new InputStreamReader(bldg.openStream()));
 
                     String input2;
@@ -100,6 +100,7 @@ public class LoadingScreen extends AppCompatActivity {
                     intent.putExtra("lot_id", results[0]);
                     intent.putExtra("spot_id", results[1]);
                     startActivity(intent);
+                    finish();
 
                 }catch(IOException ex){
                     //handle errors in reading from server

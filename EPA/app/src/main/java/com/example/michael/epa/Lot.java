@@ -56,14 +56,20 @@ public class Lot {
 
     public String getBest(){
         int[] pick = coordSpaces.get(0);
-        Space theSpot = spaces.get(0);
         String spotInfo = "";
+        if (coordSpaces.get(0)[0] == -1){
+            spotInfo += ("NA NA");
+            }else{
+
+
+        Space theSpot = spaces.get(0);
+
         for (Space space:spaces){
             if(space.get_coord() == pick){
                 theSpot = space;
             }
         }
-        spotInfo += (this.getName() + " "+ theSpot.get_spot());
+        spotInfo += (this.getName() + " "+ theSpot.get_spot());}
 
         return spotInfo;
     }
@@ -106,7 +112,13 @@ public class Lot {
                 coordSpaces.add(space.get_coord());
             }
         }
-        coordSpaces = InsertionSort(coordSpaces,type);
+        if(coordSpaces.isEmpty()){
+            int[] dang = new int[2];
+            dang[0] = -1;
+            dang[1] = -1;
+            coordSpaces.add(dang);
+        }else{
+        coordSpaces = InsertionSort(coordSpaces,type);}
     }
     public boolean Compare(int[] coord1,int[]coord2,String type){
         int xb = -1;
@@ -116,7 +128,7 @@ public class Lot {
                 yb = -1;
                 break;
             case "C":
-                yb = Math.floorDiv(lotWidth , 2);
+                yb = (int) Math.floor(lotWidth/2);
                 break;
             case "R":
                 yb = lotWidth;
