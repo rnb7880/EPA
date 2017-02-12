@@ -2,6 +2,7 @@ package com.example.michael.epa;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,9 +15,9 @@ public class LoadingScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading_screen);
-        /*
-        String building_id = getIntent().getStringExtra("building_id");                 // building id sent from Selection Screen
 
+        String building_id = getIntent().getStringExtra("building_id");                 // building id sent from Selection Screen
+        /*
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {

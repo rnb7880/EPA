@@ -29,17 +29,15 @@
             <TextView
                 android:text="About the Developers"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/textViewAbout"
-                android:height="60dp"
                 android:textSize="34sp"
-                android:textAlignment="center"
-                />
+                android:textAlignment="center" />
         <!-- MICHAEL JONES-->
             <ImageView
                 android:id="@+id/mjInfo"
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="wrap_content"
                 android:src="@drawable/mj"
                 android:layout_weight="0.67"
                 android:contentDescription="@string/image" />
@@ -84,6 +82,34 @@
             android:textSize="34sp"
             android:textAlignment="center"
              />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:weightSum="1">
+
+            <Button android:id="@+id/main_menu"
+                android:layout_height="wrap_content"
+                android:text="@string/main_menu"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_weight="0.46" />
+
+            <Button android:id="@+id/help"
+                android:layout_height="wrap_content"
+                android:text="@string/help"
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="0.53" />
+
+        </LinearLayout>
 
     </TableLayout>
 

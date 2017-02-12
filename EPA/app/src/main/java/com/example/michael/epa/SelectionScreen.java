@@ -30,7 +30,7 @@ public class SelectionScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selection_screen);
 
-        final String[] buildings = new String[]{"Select a building", "A", "B", "C"};                          //TODO add buildings algorithmically?
+        final String[] buildings = new String[]{"Select a building", "A", "B", "C"};
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(SelectionScreen.this,
@@ -42,7 +42,7 @@ public class SelectionScreen extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                switch (position) {                                                                    // TODO must be changed with above todo tag
+                switch (position) {
                     case 0:
                         setBuildingID("");
                         break;
@@ -74,7 +74,7 @@ public class SelectionScreen extends AppCompatActivity {
         find_spot.setText("Find a Spot");
         find_spot.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {                                                   // moves on to loading screen when a building is selected
-                if(buildingSelected()) {                                                    // TODO send selected building to loading screen
+                if(buildingSelected()) {
                     Intent intent = new Intent(SelectionScreen.this, LoadingScreen.class);
                     intent.putExtra("building_id", getBuildingID());
                     startActivity(intent);

@@ -62,7 +62,7 @@
 
     <Button android:id="@+id/find_spot"
         android:layout_width="fill_parent"
-        android:layout_marginTop="61dp"
+        android:layout_marginTop="22dp"
         android:text="Find a Spot"
         android:textSize="44sp"
         android:layout_height="150dp"
