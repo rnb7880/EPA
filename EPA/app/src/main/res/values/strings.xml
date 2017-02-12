@@ -5,4 +5,11 @@
     <string name="mbText">MICHAEL B</string>
     <string name="mjText">MICHAEL J</string>
     <string name="rbText">RACHEL B</string>
+    <string name="help_info">1. From the main menu, tap &quot;FIND A SPOT&quot;\n\n2.From the dropdown menu, select the building you\'d like to park near\n\n3.Once you have selected a building, press &quot;FIND MY SPOT&quot;\n\n4.Your spot will appear! Now claim it before smomeone gets there!</string>
+    <string name="help">Help</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="about">About</string>
+    <string name="selection_title">Which building are you parking at?</string>
+    <string name="spot_title">Your parking spot is...</string>
+
 </resources>

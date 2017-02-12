@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class HelpPage extends AppCompatActivity {
 
@@ -34,6 +35,14 @@ public class HelpPage extends AppCompatActivity {
         final Button main_menu = (Button) findViewById(R.id.main_menu);
         main_menu.setText("Main Menu");
         main_menu.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(HelpPage.this, MainMenu.class);
+                startActivity(intent);
+            }
+        });
+
+        final ImageButton logo = (ImageButton) findViewById(R.id.logo);
+        logo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(HelpPage.this, MainMenu.class);
                 startActivity(intent);

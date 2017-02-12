@@ -10,40 +10,53 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.michael.epa.HelpPage">
 
-    <Button android:id="@+id/main_menu"
-        android:layout_height="wrap_content"
-        android:text="Main Menu"
-        android:layout_width="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Button android:id="@+id/about"
         android:layout_height="wrap_content"
-        android:text="About"
+        android:text="@string/about"
         android:layout_width="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <TextView
-        android:text="1. From the main menu, tap &quot;FIND A SPOT&quot;\n\n2.From the dropdown menu, select the building you'd like to park near\n\n3.Once you have selected a building, press &quot;FIND MY SPOT&quot;\n\n4.Your spot will appear! Now claim it before smomeone gets there!"
-        android:layout_width="wrap_content"
+    <Button android:id="@+id/main_menu"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:textSize="24sp" />
+        android:text="@string/main_menu"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Help"
+        android:text="@string/help"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
         android:id="@+id/textView"
         android:textSize="72sp"
-        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_height="400px"
+        android:id="@+id/logo"
+        android:background="@drawable/logo"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="0dp" />
+
+    <TextView
+        android:text="@string/help_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="18sp"
+        android:textIsSelectable="false"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
