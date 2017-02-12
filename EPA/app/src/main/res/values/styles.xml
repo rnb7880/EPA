@@ -12,4 +12,5 @@
         <item name="android:colorBackground">@color/background_material_dark_1</item>
     </style>
 
+
 </resources>

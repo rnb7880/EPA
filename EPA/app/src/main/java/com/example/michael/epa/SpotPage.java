@@ -10,4 +10,9 @@ public class SpotPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spot_page);
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }

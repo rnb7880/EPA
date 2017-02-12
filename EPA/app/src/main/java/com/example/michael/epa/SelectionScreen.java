@@ -102,4 +102,9 @@ public class SelectionScreen extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }

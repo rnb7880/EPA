@@ -53,4 +53,9 @@ public class HelpPage extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        finish();
+    }
 }
