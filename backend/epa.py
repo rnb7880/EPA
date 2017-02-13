@@ -4,7 +4,9 @@ from pkspot import *
 from SortCoord import *
 import time
 import UploadData
-import os
+import random
+import progressbar
+
 
 def readmask(mask):
     """
@@ -112,7 +114,7 @@ def isoccupied(spot,imlot,im_empty_lot,count):
     percentdiff = np.mean(diff)
 
     # print(percentdiff)
-    return (percentdiff > 55)
+    return (percentdiff > 50)
 
 
 def updateoccupancy(im_lot,spotlist,im_empty_lot):
@@ -143,7 +145,7 @@ def printlot(spotlist):
     count = 0
     for spot in spotlist:
         if spot.isoccupied == True:
-            boollist.append("*")
+            boollist.append("X")
         else:
             boollist.append(" ")
 
@@ -152,20 +154,48 @@ def printlot(spotlist):
     print("---------------------")
     print("|"+boollist[29]+"|"+boollist[28]+"|"+boollist[27]+"|"+boollist[26]+"|"+boollist[25]+"|"+boollist[24]+"|"+
           boollist[23]+"|"+boollist[22]+"|"+boollist[21]+"|"+boollist[20]+"|")
-    print("---------------------")
+    print("")
+    print("")
     print("|"+boollist[19]+"|"+boollist[18]+"|"+boollist[17]+"|"+boollist[16]+"|"+boollist[15]+"|"+boollist[14]+"|"+
           boollist[13]+"|"+boollist[12]+"|"+boollist[11]+"|"+boollist[10]+"|")
     print("---------------------")
     print("|"+boollist[9]+"|"+boollist[8]+"|"+boollist[7]+"|"+boollist[6]+"|"+boollist[5]+"|"+boollist[4]+"|"+
           boollist[3]+"|"+boollist[2]+"|"+boollist[1]+"|"+boollist[0]+"|")
-    print("---------------------")
+    print("")
 
     ct = 0
     for b in boollist:
-        if b != "*":
+        if b != "X":
             ct+=1
-    print(str(ct)+" spot(s) free")
+    if ct ==1:
+        print(str(ct)+" spot free")
+    else:
+        print(str(ct)+" spots free")
     print("")
+
+def printquotes():
+    quotes = []
+    quotes.append("eating snacks...")
+    quotes.append("taking a nap...")
+    quotes.append("going outside...")
+    quotes.append("flushing pipe network...")
+    quotes.append("integrating curves...")
+    quotes.append("searching for llamas...")
+    quotes.append("synthesizing gravity...")
+    quotes.append("farming clementines...")
+    quotes.append("petting rhinos...")
+    quotes.append("loading...")
+    quotes.append("press 'A' to jump")
+    quotes.append("baking fishsticks...")
+    quotes.append("melting tuna melts...")
+    quotes.append("threading the needle...")
+    print("")
+
+    for i in range(3):
+        j = random.randint(0,13)
+        print(quotes[j])
+        time.sleep(2)
+
 
 def main():
     im_empty_lot = cv2.imread("pk_large/pk_large_empty.jpg",cv2.IMREAD_GRAYSCALE)
@@ -195,7 +225,8 @@ def main():
         im_lot = updateoccupancy(im_lot,spotlist,im_empty_lot)
 
         printlot(spotlist)
-        time.sleep(2)
+        time.sleep(.5)
+        printquotes()
 
 main()
 

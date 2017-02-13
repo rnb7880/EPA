@@ -1,8 +1,6 @@
 import paramiko
-import base64
 import os
 import time
-import datetime
 """
 Test of paramiko's capabilities. Uploads a local file to a
 remote server via sftp
@@ -38,7 +36,7 @@ def Upload():
     # establish connection to remote server
     transport.connect(username=username,password=password)
     print("user: "+username+" establishing connection to "+host+"...")
-    time.sleep(1)
+    time.sleep(.5)
     print("connected!")
 
     # initiate SFTP
@@ -56,7 +54,7 @@ def Upload():
 
     # upload file from local dir to remote dir
     print("attempting transfer "+localpath0+ " to remote directory "+remotepath0+"...")
-    # time.sleep(1)
+    time.sleep(1)
     sftp.put(localpath0,remotepath0)
     sftp.put(localpath1,remotepath1)
     print("transfer successful!")
