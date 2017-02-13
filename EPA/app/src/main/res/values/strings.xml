@@ -5,12 +5,15 @@
     <string name="mbText">MICHAEL B</string>
     <string name="mjText">MICHAEL J</string>
     <string name="rbText">RACHEL B</string>
-    <string name="help_info">1. From the main menu, tap &quot;FIND A SPOT&quot;\n\n2. From the dropdown menu, select the building you\'d like to park near\n\n3. Once you have selected a building, press &quot;FIND MY SPOT&quot;\n\n4. Your spot will appear, now claim it before someone gets there!</string>
+    <string name="help_info">1. From the main menu, tap &quot;FIND A SPOT&quot;\n\n2. From the dropdown menu, select the building you\d like to park near\n\n3. Once you have selected a building, press &quot;FIND MY SPOT&quot;\n\n4. Your spot will appear, now claim it before someone gets there!</string>
     <string name="help">Help</string>
     <string name="main_menu">Main Menu</string>
     <string name="about">About</string>
     <string name="selection_title">Which building are you parking at?</string>
     <string name="spot_title">Your parking spot is&#8230;</string>
     <string name="image">image</string>
+    <string name="mjTextBody">Second year Computer Science student here at RIT. In his first Hackathon, Michael wrote the Android application you\'re looking at. Previous to this hackathon, Michael had neither experience in Android nor staying up this far past his bed time.</string>
+    <string name="mbTextBody">Second year Computer Engineering student here at RIT. Michael\'s primary focus was the application\'s backend - working with OpenCV and learning about SFTP for the first time. By most of our peers, Michael is considered the better Michael.</string>
+    <string name="rbTextBody">Fourth year Biomedical Engineer here at Rochester Institute of Technology. For this project, Rachel took the lead on writing the logic to determine the parking space sent to the user. She enjoys sushi, poetry, and is a proud cat mom.</string>
 
 </resources>
